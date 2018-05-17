@@ -8,8 +8,7 @@ import java.net.URL;
 
 public class ForecastPage extends PageObject{
 
-    public String URL;
-
+    private String URL;
     @FindBy(id="firstname")
     private WebElement firstName;
 
@@ -19,17 +18,16 @@ public class ForecastPage extends PageObject{
     @FindBy(css ="div[style='padding-bottom']")
     public WebElement tuesdayScope;
 
-
-
-
+    @FindBy(className ="summary")
+    public WebElement tuesday;
 
     public ForecastPage(WebDriver driver){
-        super(driver);
-        URL = "https://weather-acceptance.herokuapp.com/";
+        super(driver );
+        URL  = "https://weather-acceptance.herokuapp.com/";
     }
 
-    public void GotoPage() {
-        driver.get(URL);
+    public String getURL(){
+        return URL;
     }
 
 }
