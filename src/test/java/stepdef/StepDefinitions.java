@@ -1,12 +1,14 @@
 package stepdef;
 
-import com.AutomationWipro.ForecastPage;
+import com.AutomationWipro.Models.DayComponent;
+import com.AutomationWipro.Models.ForecastPage;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.Before;
 import org.junit.After;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+
 import java.util.concurrent.TimeUnit;
 
 public class StepDefinitions {
@@ -26,8 +28,11 @@ public class StepDefinitions {
 
         forecastPage.tuesday.click();
 
-        for
+        DayComponent a3 = forecastPage.GetDayComponent(3);
+
+        a3.ToggleDay();
     }
+
 
     @Before
     public  void setUp(){
