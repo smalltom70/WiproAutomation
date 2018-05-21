@@ -2,13 +2,11 @@ package stepdef;
 
 import com.AutomationWipro.Models.DayComponent;
 import com.AutomationWipro.Models.ForecastPage;
-import cucumber.api.PendingException;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.Before;
 import cucumber.api.java.After;
 import cucumber.api.java.en.When;
-
 import org.junit.Assert;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -25,32 +23,6 @@ public class StepDefinitions {
     public void iAmOnTheForecastsPage() {
 
         driver.get(forecastPage.getURL());
-    }
-
-    @Then("^Tuesday scope is displayed$")
-    public void tuesdayScopeIsDisplayed() {
-
-        forecastPage.tuesday.click();
-
-        DayComponent a3 = forecastPage.GetDayComponent(3);
-
-        a3.ToggleDay();
-    }
-
-
-    @Before
-    public  void setUp(){
-        System.setProperty("webdriver.chrome.driver", "drivers/chromedriver.exe");
-        driver = new ChromeDriver();
-         forecastPage = new ForecastPage(driver);
-        driver.manage().timeouts().implicitlyWait(10,TimeUnit.SECONDS);
-        driver.manage().window().maximize();
-    }
-
-    @After
-    public static void tearDown(){
-
-        driver.close();
     }
 
     @Then("^a 5 day forecast will be displayed$")
@@ -77,5 +49,20 @@ public class StepDefinitions {
     @Then("^a error message is displayed$")
     public void aErrorMessageIsDisplayed()  {
         Assert.assertEquals( "Error retrieving the forecast", forecastPage.GetError());
+    }
+
+    @Before
+    public  void setUp(){
+        System.setProperty("webdriver.chrome.driver", "drivers/chromedriver.exe");
+        driver = new ChromeDriver();
+        forecastPage = new ForecastPage(driver);
+        driver.manage().timeouts().implicitlyWait(10,TimeUnit.SECONDS);
+        driver.manage().window().maximize();
+    }
+
+    @After
+    public static void tearDown(){
+
+        driver.close();
     }
 }

@@ -1,0 +1,4 @@
+-------------------------------------------------------------------------------
+Test set: stepdef.CukesRunnerTest
+-------------------------------------------------------------------------------
+Tests run: 28, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 63.86 s - in stepdef.CukesRunnerTest
