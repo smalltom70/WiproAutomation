@@ -127,3 +127,14 @@ Saying that I was only able to implement two tests.
 - Provide support for multiple browsers
 - Be more OS agnostic
 - Better organise files.
+
+------------------------------------------------------------------------------------------------------------------------
+How to build
+
+- Download chrome
+- Clone repo
+- install jdk
+- install maven
+- open cmdd in root of folder
+- run "maven test"
+- Will not work on OS

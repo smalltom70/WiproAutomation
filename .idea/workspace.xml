@@ -2,12 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7832ce98-9216-41d3-9e79-edf871e82d85" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/AutomationWipro/ExampleSteps.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/AutomationWipro/Models/ForecastPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/AutomationWipro/Models/ForecastPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/stepdef/CukesRunner.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/stepdef/CukesRunnerTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/stepdef/DefaultTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/stepdef/StepDefinitions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/stepdef/StepDefinitions.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -39,11 +34,20 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="CukesRunnerTest.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="CukesRunnerTest.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/stepdef/CukesRunnerTest.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="119">
               <caret line="8" column="31" lean-forward="true" selection-start-line="8" selection-start-column="31" selection-end-line="8" selection-end-column="31" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="README.md" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/README.md">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="239">
+              <caret line="132" lean-forward="true" selection-start-line="132" selection-end-line="132" />
             </state>
           </provider>
         </entry>
@@ -158,13 +162,13 @@
         <option value="$PROJECT_DIR$/src/test/resources/BasicForecast.feature" />
         <option value="$PROJECT_DIR$/src/test/resources/InputField.feature" />
         <option value="$PROJECT_DIR$/src/test/java/com/AutomationWipro/Models/DayComponent.java" />
-        <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/src/test/java/com/AutomationWipro/Models/ForecastPage.java" />
         <option value="$PROJECT_DIR$/src/test/java/stepdef/DefaultTest.java" />
         <option value="$PROJECT_DIR$/src/test/java/stepdef/StepDefinitions.java" />
         <option value="$PROJECT_DIR$/src/test/java/stepdef/CukesRunner.java" />
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/test/java/stepdef/CukesRunnerTest.java" />
+        <option value="$PROJECT_DIR$/README.md" />
       </list>
     </option>
   </component>
@@ -809,13 +813,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/README.md">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="154">
-          <caret line="120" lean-forward="true" selection-start-line="120" selection-end-line="120" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/stepdef/DefaultTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="141">
@@ -965,6 +962,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="119">
           <caret line="8" column="31" lean-forward="true" selection-start-line="8" selection-start-column="31" selection-end-line="8" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="239">
+          <caret line="132" lean-forward="true" selection-start-line="132" selection-end-line="132" />
         </state>
       </provider>
     </entry>
