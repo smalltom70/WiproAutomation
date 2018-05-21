@@ -111,3 +111,19 @@ Then the forecast data is correctly rounded down
 
 --------------------------------------------------------------------------------------------------------------------------
 What else I would like to acheive
+
+Comment:
+Since Java was expected as the program language I found that at the start of the exercise it was quite slow for me.
+I have used Java based automation previously however I haven't setup a framework from the ground up.  At the end of the
+excercise I was making much quicker progress and would have completed all the within couple hours.
+
+Saying that I was only able to implement two tests.
+
+- Implement other tests
+- Implement Logger class
+- Log better errors upon failures indicating issues
+
+
+- Provide support for multiple browsers
+- Be more OS agnostic
+- Better organise files.

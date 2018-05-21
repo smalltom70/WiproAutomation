@@ -2,10 +2,14 @@ package stepdef;
 
 import com.AutomationWipro.Models.DayComponent;
 import com.AutomationWipro.Models.ForecastPage;
+import cucumber.api.PendingException;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.Before;
-import org.junit.After;
+import cucumber.api.java.After;
+import cucumber.api.java.en.When;
+
+import org.junit.Assert;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
@@ -17,7 +21,7 @@ public class StepDefinitions {
 
     ForecastPage forecastPage = new ForecastPage(driver);
 
-    @Given("^I am on the Forecasts page$")
+    @Given("^I am on the forecast page$")
     public void iAmOnTheForecastsPage() {
 
         driver.get(forecastPage.getURL());
@@ -44,12 +48,34 @@ public class StepDefinitions {
     }
 
     @After
-    public void cleanUp(){
-        driver.manage().deleteAllCookies();
+    public static void tearDown(){
+
+        driver.close();
     }
 
-    @After
-    public static void tearDown(){
-        driver.close();
+    @Then("^a 5 day forecast will be displayed$")
+    public void aDayForecastWillBeDisplayed() {
+        //Wanted to show type of assertion done.  If given more time this would be dynamic and would check full forecast
+        // displayed over entire week.
+        DayComponent firstDay = forecastPage.GetDayComponent(0);
+
+        Assert.assertEquals(firstDay.GetDate(), "20");
+        Assert.assertEquals(firstDay.GetDay(), "Tue");
+        Assert.assertTrue(firstDay.IsMaxTempDisplayed());
+        Assert.assertTrue(firstDay.IsMinTempDisplayed());
+        Assert.assertTrue(firstDay.IsWindDirectionDisplayed());
+        Assert.assertTrue(firstDay.IsWindSpeedDisplayed());
+        Assert.assertTrue(firstDay.IsRainfallDisplayed());
+
+    }
+
+    @When("^I enter the city name \"([^\"]*)\"$")
+    public void iEnterTheCityName(String cityName) {
+        forecastPage.EnterCityInput(cityName);
+    }
+
+    @Then("^a error message is displayed$")
+    public void aErrorMessageIsDisplayed()  {
+        Assert.assertEquals( "Error retrieving the forecast", forecastPage.GetError());
     }
 }
